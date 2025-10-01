@@ -1,47 +1,79 @@
-import Head from "next/head";
 import Link from "next/link";
 
 export const metadata = {
-  title: "LinkTri Clone | About",
+  title: "LINKLY | Sobre",
   description:
-    "Share your links, social profiles, contact info and more on one page",
+    "Conheça a LINKLY - a plataforma completa para unificar todos os seus links",
 };
+
 export default function About() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 mt-10">
-      <main className="flex flex-col items-center w-full flex-1 px-4 md:px-20 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-800">
-          About <span className="text-blue-500">LinkTri</span>
-        </h1>
-
-        <p className="mt-4 text-lg md:text-xl text-gray-600">
-          LinkTri is a dynamic and user-friendly platform designed to streamline
-          your online presence. Inspired by actual{" "}
-          <a className="text-blue-500" href="https://linktr.ee/">
-            Linktree
-          </a>
-          , it allows users to create a personalized and easily shareable page
-          that houses all their important links in one place.
-        </p>
-
-        <div className="mt-8 text-gray-600 text-left">
-          <h2 className="text-3xl font-semibold">Key Features</h2>
-          <ul className="mt-4 list-disc list-inside space-y-2">
-            <li>Simple and secure authentication process.</li>
-            <li>Intuitive dashboard for managing your links and profile.</li>
-            <li>Customizable link buttons with real-time previews.</li>
-            <li>
-              Analytics to gain insights into your audience&apos;s engagement.
-            </li>
-            <li>
-              Optimized for performance and SEO, ensuring your page stands out.
-            </li>
-          </ul>
+    <div className="min-h-screen py-16">
+      <main className="max-w-4xl mx-auto px-4">
+        {/* Hero Section */}
+        <div className="text-center mb-16 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+            Sobre a{" "}
+            <span className="bg-gradient-to-r from-primary-600 via-purple-600 to-accent-600 bg-clip-text text-transparent">
+              LINKLY
+            </span>
+          </h1>
+          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            LINKLY é uma plataforma moderna e intuitiva projetada para simplificar sua presença online. 
+            Crie uma página personalizada e compartilhável que reúne todos os seus links importantes em um só lugar.
+          </p>
         </div>
 
-        <div className="mt-8">
-          <Link href="/" className="text-lg text-blue-500 hover:underline">
-            Go back home
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
+              <span className="text-white text-2xl">🔐</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-3 text-gray-800">Seguro e Simples</h3>
+            <p className="text-gray-600">
+              Autenticação segura com Google. Configure sua conta em segundos.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
+              <span className="text-white text-2xl">🎨</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-3 text-gray-800">Totalmente Personalizável</h3>
+            <p className="text-gray-600">
+              Customize seus links, botões e perfil com visualização em tempo real.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
+              <span className="text-white text-2xl">📊</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-3 text-gray-800">Analytics Poderoso</h3>
+            <p className="text-gray-600">
+              Acompanhe cliques e engajamento da sua audiência com métricas detalhadas.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
+              <span className="text-white text-2xl">⚡</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-3 text-gray-800">Rápido e Otimizado</h3>
+            <p className="text-gray-600">
+              Performance e SEO otimizados para garantir que sua página se destaque.
+            </p>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary hover:bg-gradient-primary-hover text-white font-bold rounded-xl shadow-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105"
+          >
+            ← Voltar para home
           </Link>
         </div>
       </main>

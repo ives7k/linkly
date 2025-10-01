@@ -1,69 +1,84 @@
-import Head from "next/head";
 import Link from "next/link";
 
 export const metadata = {
-  title: "LinkTri Clone | Pricing",
+  title: "LINKLY | Preços",
   description:
-    "Share your links, social profiles, contact info and more on one page",
+    "Planos simples e transparentes para todos os criadores",
 };
 
 export default function Pricing() {
   return (
-    <div className="py-8 px-4">
-      <main className="max-w-6xl mb-20 mx-auto mt-10">
-        <h1 className="text-center text-4xl font-bold text-gray-800 mb-20">
-          Pricing Plans
-        </h1>
-        <div className="flex flex-wrap justify-center gap-10">
-          {/* Free Plan */}
-          <div className="w-full max-w-sm p-6 border rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white">
-            <h2 className="text-2xl font-semibold text-center mb-4">Free</h2>
-            <ul className="mb-6">
-              <li className="mb-2">Basic Link Management</li>
-              <li className="mb-2">Custom Profile URL</li>
-              <li className="mb-2">Basic Analytics</li>
-            </ul>
-            <div className="text-center">
+    <div className="min-h-screen py-16">
+      <main className="max-w-6xl mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+            <span className="bg-gradient-to-r from-primary-600 via-purple-600 to-accent-600 bg-clip-text text-transparent">
+              Planos e Preços
+            </span>
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Comece gratuitamente e escale conforme você cresce
+          </p>
+        </div>
+
+        {/* Pricing Card */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-lg bg-white p-10 rounded-3xl shadow-soft hover:shadow-glow transition-all duration-300 border-2 border-primary-200 relative overflow-hidden">
+            {/* Badge */}
+            <div className="absolute top-0 right-0 bg-gradient-primary text-white px-6 py-2 rounded-bl-2xl font-bold">
+              Grátis para sempre
+            </div>
+            
+            <div className="mt-8">
+              <h2 className="text-4xl font-extrabold text-gray-800 mb-2">Plano Gratuito</h2>
+              <p className="text-gray-600 mb-8">Tudo que você precisa para começar</p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <span className="text-primary-600 text-xl">✓</span>
+                  <span className="text-gray-700">Links ilimitados</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-primary-600 text-xl">✓</span>
+                  <span className="text-gray-700">URL personalizada</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-primary-600 text-xl">✓</span>
+                  <span className="text-gray-700">Analytics básico</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-primary-600 text-xl">✓</span>
+                  <span className="text-gray-700">Personalização completa</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-primary-600 text-xl">✓</span>
+                  <span className="text-gray-700">Suporte por email</span>
+                </div>
+              </div>
+
               <Link
                 href="/account"
-                className="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-200 transition-colors"
+                className="block w-full text-center bg-gradient-primary hover:bg-gradient-primary-hover text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105"
               >
-                Get Started
+                Começar Agora
               </Link>
             </div>
           </div>
+        </div>
 
-          {/* Pro Plan */}
-          {/* <div className="w-full max-w-sm p-6 border rounded-lg shadow-md hover:shadow-lg transition-shadow bg-blue-50">
-            <h2 className="text-2xl font-semibold text-center mb-4">Pro</h2>
-            <ul className="mb-6">
-              <li className="mb-2">All Free features</li>
-              <li className="mb-2">Advanced Link Management</li>
-              <li className="mb-2">Extended Analytics</li>
-              <li className="mb-2">Custom Domains</li>
-            </ul>
-            <div className="text-center">
-              <Link href="/signup"
-                className="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-200 transition-colors">Upgrade
-              </Link>
-            </div>
-          </div> */}
 
-          {/* Enterprise Plan */}
-          {/* <div className="w-full max-w-sm p-6 border rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h2 className="text-2xl font-semibold text-center mb-4">Enterprise</h2>
-            <ul className="mb-6">
-              <li className="mb-2">All Pro features</li>
-              <li className="mb-2">24/7 Support</li>
-              <li className="mb-2">Custom Integrations</li>
-              <li className="mb-2">Unlimited Links</li>
-            </ul>
-            <div className="text-center">
-              <Link href="/contact"
-                className="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-200 transition-colors">Contact Us
-              </Link>
-            </div>
-          </div> */}
+        {/* Info adicional */}
+        <div className="mt-16 text-center">
+          <p className="text-gray-600 mb-4">
+            Precisa de mais recursos? Entre em contato!
+          </p>
+          <Link
+            href="/contact"
+            className="text-primary-600 hover:text-primary-700 font-semibold underline"
+          >
+            Fale conosco →
+          </Link>
         </div>
       </main>
     </div>
