@@ -35,13 +35,13 @@ export default function HeroForm({user}) {
       onSubmit={handleSubmit}
       className="inline-flex items-center bg-white shadow-soft hover:shadow-lg transition-all rounded-xl overflow-hidden border-2 border-primary-100 hover:border-primary-200">
       <span className="py-4 pl-6 text-gray-500 font-medium text-sm">
-        linkly.to/
+        linkly.run/
       </span>
       <input
         type="text"
         className="py-4 px-2 outline-none font-medium text-gray-800 placeholder:text-gray-400"
         style={{backgroundColor:'white', marginBottom:0}}
-        placeholder="seuusername"/>
+        placeholder="seunome"/>
       <button
         type="submit"
         className="bg-gradient-primary hover:bg-gradient-primary-hover text-white font-bold py-4 px-8 whitespace-nowrap transition-all duration-300 shadow-lg hover:shadow-glow transform hover:scale-105">
