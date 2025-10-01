@@ -23,10 +23,10 @@ export default async function Home() {
     <main>
       <section className="pt-32 flex flex-wrap md:flex-nowrap justify-center items-center">
         <div className="max-w-6xl mb-8 md:mb-0 md:mr-8">
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
             Todos os seus links em uma página
           </h1>
-          <h2 className="text-gray-600 text-xl mt-6 mb-4">
+          <h2 className="text-gray-600 text-xl mt-6 mb-4 leading-relaxed">
             Compartilhe seus links, redes sociais, contatos e muito mais de forma simples e elegante
           </h2>
           <HeroForm user={session?.user} />
@@ -42,10 +42,10 @@ export default async function Home() {
         /> */}
       </section>
       <div className="mt-20 text-center max-w-5xl">
-        <h1 className="mb-5 text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="mb-6 text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight">
           Nunca mais mude o link da sua bio
         </h1>
-        <p className="text-gray-600 text-lg">
+        <p className="text-gray-600 text-lg leading-relaxed">
           LINKLY resolve o problema mais irritante das redes sociais: ter apenas um link na bio. 
           Perfeito para criadores de conteúdo, empresas e influenciadores que querem crescer, 
           engajar e monetizar sua audiência de forma simples e profissional.
@@ -53,10 +53,10 @@ export default async function Home() {
       </div>
       <GridContainer />
       <div className="mt-20 text-center max-w-5xl">
-        <h1 className="mb-5 text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+        <h1 className="mb-6 text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
           Transforme sua bio em um mini-site
         </h1>
-        <p className="text-gray-600 text-lg mb-8">
+        <p className="text-gray-600 text-lg leading-relaxed mb-10">
           Em segundos, crie um espaço único onde seus seguidores podem descobrir todo o seu conteúdo, 
           conectar-se com você em outras plataformas e apoiar seu trabalho com apenas um link.
         </p>
