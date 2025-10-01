@@ -21,12 +21,12 @@ const HamburgerMenu = ({ session }) => {
         <>
           {/* Backdrop */}
           <div 
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60]"
             onClick={toggleMenu}
           />
           
           {/* Menu */}
-          <div className="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 animate-slide-in">
+          <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-[70]">
             <div className="flex flex-col h-full">
               {/* Header do menu */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
