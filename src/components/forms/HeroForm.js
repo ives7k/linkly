@@ -33,19 +33,19 @@ export default function HeroForm({user}) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="inline-flex items-center shadow-lg bg-white shadow-gray-500/20 rounded-md">
-          <span className="bg-white py-4 pl-4 rounded-md">
-            linktri.vercel.app/
-          </span>
+      className="inline-flex items-center bg-white shadow-soft hover:shadow-lg transition-all rounded-xl overflow-hidden border-2 border-primary-100 hover:border-primary-200">
+      <span className="py-4 pl-6 text-gray-500 font-medium text-sm">
+        linkly.to/
+      </span>
       <input
         type="text"
-        className=""
-        style={{backgroundColor:'white',marginBottom:0,paddingLeft:0}}
-        placeholder="username"/>
+        className="py-4 px-2 outline-none font-medium text-gray-800 placeholder:text-gray-400"
+        style={{backgroundColor:'white', marginBottom:0}}
+        placeholder="seuusername"/>
       <button
         type="submit"
-        className="bg-blue-500 hover:bg-blue-300 rounded-md text-white py-4 px-6 whitespace-nowrap">
-        Join for Free
+        className="bg-gradient-primary hover:bg-gradient-primary-hover text-white font-bold py-4 px-8 whitespace-nowrap transition-all duration-300 shadow-lg hover:shadow-glow transform hover:scale-105">
+        Cadastrar Grátis
       </button>
     </form>
   );

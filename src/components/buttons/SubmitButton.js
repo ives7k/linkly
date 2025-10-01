@@ -6,10 +6,10 @@ export default function SubmitButton({children, className=''}) {
     <button
       type="submit"
       disabled={pending}
-      className={"bg-blue-500 disabled:bg-blue-400 text-white disabled:text-gray-200 py-2 px-4 mx-auto w-full flex gap-2 items-center justify-center hover:bg-blue-300 rounded-md" + className}
+      className={"bg-gradient-primary hover:bg-gradient-primary-hover disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-6 mx-auto w-full flex gap-2 items-center justify-center rounded-xl shadow-lg hover:shadow-glow transition-all duration-300 " + className}
     >
       {pending && (
-        <span>Saving...</span>
+        <span>Salvando...</span>
       )}
       {!pending && children}
     </button>

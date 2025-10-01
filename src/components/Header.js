@@ -26,7 +26,7 @@ export default async function Header() {
           {!!session ? (
             <>
               <Link
-                className="flex items-center gap-2 px-6 py-2.5 rounded-lg text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-white bg-gradient-primary hover:bg-gradient-primary-hover font-bold shadow-lg hover:shadow-glow transition-all duration-300"
                 href="/account"
               >
                 Minha Conta
@@ -35,7 +35,7 @@ export default async function Header() {
             </>
           ) : (
             <Link
-              className="flex items-center gap-2 px-6 py-2.5 rounded-lg text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+              className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-white bg-gradient-primary hover:bg-gradient-primary-hover font-bold shadow-lg hover:shadow-glow transition-all duration-300"
               href="/login"
             >
               Entrar

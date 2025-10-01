@@ -29,8 +29,8 @@ const Carousel = ({ images }) => {
           key={index}
           src={image}
           alt={`Slide ${index}`}
-          className={`rounded-2xl border-2 shadow-gray-500/20 shadow-lg absolute transition-opacity duration-1000 ${currentIndex === index ? 'opacity-100' : 'opacity-0'} ${isAnimating ? 'z-10' : 'z-0'}`}
-          style={{ height: '500px', width: '290px', objectFit: 'cover' }} // Ensure images cover the area properly
+          className={`rounded-3xl border-2 border-primary-100 shadow-soft hover:shadow-glow absolute transition-opacity duration-1000 ${currentIndex === index ? 'opacity-100' : 'opacity-0'} ${isAnimating ? 'z-10' : 'z-0'}`}
+          style={{ height: '500px', width: '290px', objectFit: 'cover' }}
         />
       ))}
     </div>
