@@ -5,39 +5,39 @@ import { FaUserFriends, FaStore, FaChartBar, FaGlobe, FaQrcode, FaPlug } from 'r
 const items = [
   {
     Icon: FaUserFriends,
-    title: 'Grow your followers across all your social platforms',
-    description: 'Give your followers easy access to all of your content in one simple link. Now everything you do is just one tap away!'
+    title: 'Cresça em todas as plataformas',
+    description: 'Dê aos seus seguidores acesso fácil a todo o seu conteúdo em um único link. Tudo a um toque de distância!'
   },
   {
     Icon: FaStore,
-    title: 'Sell products & monetize your audience',
-    description: 'Sell your products, take payments, and even include “support me” links to let your audience support, tip or donate.'
+    title: 'Venda e monetize sua audiência',
+    description: 'Venda produtos, receba pagamentos e inclua links de apoio para que sua audiência possa contribuir.'
   },
   {
     Icon: FaChartBar,
-    title: 'Grow with in-depth user analytics',
-    description: 'Use powerful analytics to know what your followers are engaging with, and use the insights to grow your followers and business.'
+    title: 'Analytics detalhado',
+    description: 'Use análises poderosas para entender o que sua audiência mais engaja e crescer seu negócio.'
   },
   {
     Icon: FaGlobe,
-    title: 'Create a custom mini-website in seconds',
-    description: 'Create your own Linktree in just seconds and customize it in a way that reflects your brand or style.'
+    title: 'Mini-site personalizado em segundos',
+    description: 'Crie sua página em segundos e customize de forma que reflita sua marca e estilo único.'
   },
   {
     Icon: FaQrcode,
-    title: 'Bring your offline world online with QR codes',
-    description: 'Easily link from IRL – your product packaging, posters and flyers – to your online world with a simple QR code.'
+    title: 'Conecte o offline ao online',
+    description: 'Crie QR codes para embalagens, pôsteres e flyers que levam direto para seu conteúdo online.'
   },
   {
     Icon: FaPlug,
-    title: 'Integrate your Linktree with your existing tech',
-    description: 'Linktree seamlessly connects to other platforms like Mailchimp, Vimeo, Zapier, Amazon, YouTube, Google Analytics, plus more!'
+    title: 'Integre com suas ferramentas',
+    description: 'Conecte-se a Mailchimp, Vimeo, Zapier, Amazon, YouTube, Google Analytics e muito mais!'
   },
 ];
 
 const GridContainer = () => {
   return (
-    <div className=" mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+    <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
       {items.map((item, index) => (
         <GridItem
           key={index}
