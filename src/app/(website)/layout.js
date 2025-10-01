@@ -19,9 +19,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <body className={`${inter.className} ${poppins.variable}`}>
-        <main>
+        <main className="flex flex-col min-h-screen">
           <Header />
-          <div className="max-w-6xl mx-auto p-6 flex flex-col min-h-screen">
+          <div className="max-w-6xl mx-auto p-6 flex-grow w-full">
             {children}
           </div>
           <Footer />
