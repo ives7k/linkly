@@ -21,12 +21,16 @@ export default async function Home() {
   const session = await getServerSession(authOptions);
   return (
     <main>
-      <section className="pt-32 flex flex-wrap md:flex-nowrap justify-center items-center">
-        <div className="max-w-6xl mb-8 md:mb-0 md:mr-8">
-          <h1 className="text-6xl font-bold">Everything in one</h1>
-          <h2 className="text-gray-500 text-xl mt-6 mb-4">
-            Share your links, social media profiles, contact info and more on
-            one page
+      <section className="pt-20 pb-16 flex flex-wrap md:flex-nowrap justify-center items-center">
+        <div className="max-w-2xl mb-8 md:mb-0 md:mr-12">
+          <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-full">
+            <span className="text-indigo-700 font-semibold text-sm">✨ Tudo em um único lugar</span>
+          </div>
+          <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight mb-6">
+            Todos os seus links em uma página
+          </h1>
+          <h2 className="text-gray-600 text-xl mt-6 mb-8 leading-relaxed">
+            Compartilhe seus links, redes sociais, contatos e muito mais de forma simples e elegante
           </h2>
           <HeroForm user={session?.user} />
         </div>
@@ -40,36 +44,41 @@ export default async function Home() {
           className="rounded-2xl border-2 shadow-gray-500/20 shadow-lg hover:shadow-2xl transition-shadow"
         /> */}
       </section>
-      <div className="mt-20 text-center max-w-5xl">
-        <h1 className=" mb-5 text-5xl font-bold">
-          You never have to change the link in your bio again
+      
+      {/* Seção de benefícios */}
+      <div className="mt-24 text-center max-w-4xl mx-auto">
+        <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full">
+          <span className="text-purple-700 font-semibold text-sm">💡 Solução completa</span>
+        </div>
+        <h1 className="mb-6 text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+          Nunca mais mude o link da sua bio
         </h1>
-        <p>
-          Back in 2016 LinkTri solved social media’s most annoying problem: only
-          having one link in your bio. LinkTri was the first ‘link in bio’
-          platform made to solve this problem. LinkTri has since become so much
-          more. Allowing businesses or creators to get more out of their social
-          media, grow their following, easily take payments and take back
-          control of how your content is discovered.
+        <p className="text-gray-600 text-lg leading-relaxed">
+          LINKLY resolve o problema mais irritante das redes sociais: ter apenas um link na bio. 
+          Perfeito para criadores de conteúdo, empresas e influenciadores que querem crescer, 
+          engajar e monetizar sua audiência de forma simples e profissional.
         </p>
       </div>
+      
       <GridContainer />
-      <div className="mt-20 text-center max-w-5xl">
-        <h1 className=" mb-5 text-5xl font-bold">
-          Turn your Link In Bio into your own mini-website
+      
+      {/* Seção CTA */}
+      <div className="mt-24 text-center max-w-4xl mx-auto">
+        <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-full">
+          <span className="text-indigo-700 font-semibold text-sm">🚀 Rápido e fácil</span>
+        </div>
+        <h1 className="mb-6 text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
+          Transforme sua bio em um mini-site
         </h1>
-        <p>
-          It takes seconds to turn your bio into a mini website, allowing your
-          followers to engage with your content, discover you on other platforms
-          or purchase and support you with just one simple link.
+        <p className="text-gray-600 text-lg leading-relaxed mb-10">
+          Em segundos, crie um espaço único onde seus seguidores podem descobrir todo o seu conteúdo, 
+          conectar-se com você em outras plataformas e apoiar seu trabalho com apenas um link.
         </p>
-      </div>
-      <div className="mt-8 flex justify-center">
         <Link
           href="/account"
-          className="flex items-center gap-2 border p-2 px-3 shadow rounded-md text-white bg-blue-500 hover:bg-blue-300 font-bold"
+          className="inline-flex items-center gap-2 px-8 py-4 shadow-lg rounded-xl text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 font-bold text-lg transform hover:scale-105 transition-all duration-300"
         >
-          Start now
+          Começar agora — é grátis
         </Link>
       </div>
       <ImageGrid images={imageUrls} /> {/* Add the ImageGrid component */}
