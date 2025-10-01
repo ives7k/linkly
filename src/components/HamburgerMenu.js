@@ -1,6 +1,5 @@
 "use client"
 import LogoutButton from "@/components/buttons/LogoutButton";
-import Logo from "@/components/Logo";
 import { useState } from 'react';
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -14,81 +13,55 @@ const HamburgerMenu = ({ session }) => {
 
   return (
     <div className="sm:hidden">
-      <button onClick={toggleMenu} className="text-gray-700 text-2xl p-2 hover:text-primary-600 transition-colors">
+      <button onClick={toggleMenu} className="text-gray-700 text-2xl hover:text-primary-600 transition-colors">
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
       {isOpen && (
-        <>
-          {/* Backdrop */}
-          <div 
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60]"
-            onClick={toggleMenu}
-          />
-          
-          {/* Menu */}
-          <div className="fixed top-0 right-0 h-full w-72 bg-white shadow-2xl z-[70]">
-            <div className="flex flex-col h-full">
-              {/* Header do menu */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200">
-                <Logo />
-                <button onClick={toggleMenu} className="text-gray-700 text-2xl hover:text-primary-600 transition-colors">
-                  <FaTimes />
-                </button>
-              </div>
-
-              {/* Links */}
-              <nav className="flex flex-col gap-2 p-6 flex-grow">
-                <Link 
-                  href="/about" 
-                  className="text-gray-700 font-medium py-3 px-4 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-all" 
+        <div className="absolute top-16 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50">
+          <nav className="flex flex-col items-center gap-4 py-6">
+            <Link 
+              href="/about" 
+              className="text-gray-700 font-medium hover:text-primary-600 transition-colors" 
+              onClick={toggleMenu}
+            >
+              Sobre
+            </Link>
+            <Link 
+              href="/pricing" 
+              className="text-gray-700 font-medium hover:text-primary-600 transition-colors" 
+              onClick={toggleMenu}
+            >
+              Preços
+            </Link>
+            <Link 
+              href="/contact" 
+              className="text-gray-700 font-medium hover:text-primary-600 transition-colors" 
+              onClick={toggleMenu}
+            >
+              Contato
+            </Link>
+            {!!session ? (
+              <>
+                <Link
+                  href="/account"
+                  className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-white bg-gradient-primary hover:bg-gradient-primary-hover font-bold shadow-lg transition-all duration-300"
                   onClick={toggleMenu}
                 >
-                  Sobre
+                  Minha Conta
                 </Link>
-                <Link 
-                  href="/pricing" 
-                  className="text-gray-700 font-medium py-3 px-4 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-all" 
-                  onClick={toggleMenu}
-                >
-                  Preços
-                </Link>
-                <Link 
-                  href="/contact" 
-                  className="text-gray-700 font-medium py-3 px-4 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-all" 
-                  onClick={toggleMenu}
-                >
-                  Contato
-                </Link>
-              </nav>
-
-              {/* Botões de ação */}
-              <div className="p-6 border-t border-gray-200 space-y-3">
-                {!!session ? (
-                  <>
-                    <Link
-                      href="/account"
-                      className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-primary hover:bg-gradient-primary-hover text-white font-bold rounded-xl shadow-lg transition-all duration-300"
-                      onClick={toggleMenu}
-                    >
-                      Minha Conta
-                    </Link>
-                    <div onClick={toggleMenu}>
-                      <LogoutButton className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 border-gray-200 hover:border-primary-300 hover:bg-primary-50 font-bold transition-all duration-300" />
-                    </div>
-                  </>
-                ) : (
-                  <Link
-                    href="/login"
-                    className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-primary hover:bg-gradient-primary-hover text-white font-bold rounded-xl shadow-lg transition-all duration-300"
-                    onClick={toggleMenu}
-                  >
-                    Entrar
-                  </Link>
-                )}
-              </div>
-            </div>
-          </div>
-        </>
+                <LogoutButton className="flex items-center gap-2 px-6 py-2.5 rounded-xl border-2 border-gray-200 hover:border-primary-300 hover:bg-primary-50 font-bold transition-all duration-300" />
+              </>
+            ) : (
+              <Link
+                href="/login"
+                className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-white bg-gradient-primary hover:bg-gradient-primary-hover font-bold shadow-lg transition-all duration-300"
+                onClick={toggleMenu}
+              >
+                Entrar
+              </Link>
+            )}
+          </nav>
+        </div>
       )}
     </div>
   );
