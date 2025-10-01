@@ -6,7 +6,7 @@ export const metadata = {
 }
 export default function LoginPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center py-12">
+    <div className="flex items-center justify-center py-16">
       <div className="p-8 max-w-md w-full mx-auto bg-white rounded-2xl shadow-xl border border-gray-100">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-3">
