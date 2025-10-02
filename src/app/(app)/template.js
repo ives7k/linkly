@@ -1,6 +1,7 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import AppSidebar from "@/components/layout/AppSidebar";
 import Logo from "@/components/Logo";
+import CopyLinkButton from "@/components/CopyLinkButton";
 import { Page } from "@/models/Page";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -64,14 +65,17 @@ export default async function AppTemplate({ children, ...rest }) {
                 />
               </div>
               {page && (
-                <Link
-                  target="_blank"
-                  href={"/" + page.uri}
-                  className="text-center mb-6 flex gap-2 items-center justify-center text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors group"
-                >
-                  <span className="text-gray-400">linkly.run/</span>
-                  <span className="group-hover:underline font-bold">{page.uri}</span>
-                </Link>
+                <div className="mb-6">
+                  <Link
+                    target="_blank"
+                    href={"/" + page.uri}
+                    className="text-center flex gap-2 items-center justify-center text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors group mb-2"
+                  >
+                    <span className="text-gray-400">linkly.run/</span>
+                    <span className="group-hover:underline font-bold">{page.uri}</span>
+                  </Link>
+                  <CopyLinkButton url={`https://linkly.run/${page.uri}`} />
+                </div>
               )}
               <div className="text-center">
                 <AppSidebar />
