@@ -21,7 +21,7 @@ export default async function Home() {
   const session = await getServerSession(authOptions);
   return (
     <main>
-      <section className="pt-16 md:pt-32 flex flex-wrap md:flex-nowrap justify-center items-center">
+      <section className="-mt-6 pt-16 md:pt-32 flex flex-wrap md:flex-nowrap justify-center items-center">
         <div className="max-w-6xl mb-8 md:mb-0 md:mr-8">
           <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
             Todos os seus links em uma página
