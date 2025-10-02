@@ -21,12 +21,12 @@ export default async function Home() {
   const session = await getServerSession(authOptions);
   return (
     <main>
-      <section className="pt-16 md:pt-32 flex flex-wrap md:flex-nowrap justify-center items-center px-4">
+      <section className="pt-16 md:pt-32 flex flex-wrap md:flex-nowrap justify-center items-center">
         <div className="max-w-6xl mb-8 md:mb-0 md:mr-8">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
             Todos os seus links em uma página
           </h1>
-          <h2 className="text-gray-600 text-lg md:text-xl mt-4 md:mt-6 mb-6 md:mb-4 leading-relaxed">
+          <h2 className="text-gray-600 text-xl mt-6 mb-4 leading-relaxed">
             Compartilhe seus links, redes sociais, contatos e muito mais de forma simples e elegante
           </h2>
           <HeroForm user={session?.user} />
@@ -41,30 +41,30 @@ export default async function Home() {
           className="rounded-2xl border-2 shadow-gray-500/20 shadow-lg hover:shadow-2xl transition-shadow"
         /> */}
       </section>
-      <div className="mt-12 md:mt-20 text-center max-w-5xl px-4">
-        <h1 className="mb-4 md:mb-6 text-3xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+      <div className="mt-20 text-center max-w-5xl">
+        <h1 className="mb-6 text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight">
           Nunca mais mude o link da sua bio
         </h1>
-        <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+        <p className="text-gray-600 text-lg leading-relaxed">
           LINKLY resolve o problema mais irritante das redes sociais: ter apenas um link na bio. 
           Perfeito para criadores de conteúdo, empresas e influenciadores que querem crescer, 
           engajar e monetizar sua audiência de forma simples e profissional.
         </p>
       </div>
       <GridContainer />
-      <div className="mt-12 md:mt-20 text-center max-w-5xl px-4">
-        <h1 className="mb-4 md:mb-6 text-3xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
+      <div className="mt-20 text-center max-w-5xl">
+        <h1 className="mb-6 text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
           Transforme sua bio em um mini-site
         </h1>
-        <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 md:mb-10">
+        <p className="text-gray-600 text-lg leading-relaxed mb-10">
           Em segundos, crie um espaço único onde seus seguidores podem descobrir todo o seu conteúdo, 
           conectar-se com você em outras plataformas e apoiar seu trabalho com apenas um link.
         </p>
       </div>
-      <div className="mt-6 md:mt-8 flex justify-center px-4">
+      <div className="mt-8 flex justify-center">
         <Link
           href="/account"
-          className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 shadow-lg rounded-xl text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 font-bold text-base md:text-lg transform hover:scale-105 transition-all duration-300"
+          className="inline-flex items-center gap-2 px-8 py-4 shadow-lg rounded-xl text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 font-bold text-lg transform hover:scale-105 transition-all duration-300"
         >
           Começar agora — é grátis
         </Link>
